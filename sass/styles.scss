@@ -1,38 +1,93 @@
 // Resets, Clearfix, etc
 
+@import 'partials/reset';
+@import 'partials/clearfix';
 // Variables
- 
-// Media Query Ranges 
- 
+
+$light: #7BC9E3;
+$bright: #EBB2EB;
+$dark: #C7123C;
+$georgia: "Georgia, serif", Georgia, serif;
+// $padd: padding: 7px;
+
+// Media Query Ranges
+$smartWatch: only screen and (min-width: 340px);
+$medium: only screen and (min-width: 600px);
+$large: only screen and (min-width: 900px);
+
 // Mixins
+@mixin fontz() {
+  font-family: "Georgia, serif", Georgia, serif;
+  font-weight: bold;
+  font-style: italic;
+}
 
 // Styles
 body{
   background-color: orange;
   text-align: center;
   color: #EEE;
+  @include fontz();
+  @media #{$smartWatch}{
+  background-color: #606BDB;
+  font-weight: normal;
+  font-style: normal;
+  }
+  @media #{$medium}{
+  background-color: #744780;
+  font-family: "Andale Mono", Andale Mono, monospace;
+  }
+  @media #{$large}{
+  background-color: #5D767A;
+  font-weight: normal;
+  font-style: normal;
+  }
 }
- 
+
 h1, h2, h3, h4{
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
 }
- 
+
 h1{
   padding: 20px;
 }
- 
+
 h2{
- 
+
 }
- 
- 
+
 .block_family{
   max-width:350px;
   margin:auto;
 }
- 
+
 .block_family li{
   background-color: #222;
   margin-bottom: 20px;
   padding: 20px;
+  width: 49%;
+  margin: 0.3%;
+  float: left;
+  box-sizing: border-box;
+  @media #{$smartWatch}{
+    background-color: #606BDB;
+    width: 90%;
+    margin: 0.9%;
+    float: left;
+    box-sizing: border-box;
+  }
+  @media #{$medium}{
+    background-color: #D07DDB;
+    width: 30%;
+    margin: 0.9%;
+    float: left;
+    box-sizing: border-box;
+  }
+  @media #{$large}{
+    background-color: #35A0B5;
+    width: 22%;
+    margin: 0.9%;
+    float: left;
+    box-sizing: border-box;
+  }
 }
