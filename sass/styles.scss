@@ -11,7 +11,6 @@ $georgia: "Georgia, serif", Georgia, serif;
 // $padd: padding: 7px;
 
 // Media Query Ranges
-$smartWatch: only screen and (min-width: 340px);
 $medium: only screen and (min-width: 600px);
 $large: only screen and (min-width: 900px);
 
@@ -28,11 +27,6 @@ body{
   text-align: center;
   color: #EEE;
   @include fontz();
-  @media #{$smartWatch}{
-  background-color: #606BDB;
-  font-weight: normal;
-  font-style: normal;
-  }
   @media #{$medium}{
   background-color: #744780;
   font-family: "Andale Mono", Andale Mono, monospace;
@@ -57,7 +51,7 @@ h2{
 }
 
 .block_family{
-  max-width:350px;
+  max-width:950px;
   margin:auto;
 }
 
@@ -69,13 +63,6 @@ h2{
   margin: 0.3%;
   float: left;
   box-sizing: border-box;
-  @media #{$smartWatch}{
-    background-color: #606BDB;
-    width: 90%;
-    margin: 0.9%;
-    float: left;
-    box-sizing: border-box;
-  }
   @media #{$medium}{
     background-color: #D07DDB;
     width: 30%;
@@ -90,4 +77,7 @@ h2{
     float: left;
     box-sizing: border-box;
   }
+}
+li:nth-child(2n) {
+  background-color: #222;
 }
